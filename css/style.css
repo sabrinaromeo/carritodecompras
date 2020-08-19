@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#body{
+    background-color: rgba(173, 199, 143, 0.438);
+}
+/*h1{
+    font-family: 'Arvo', serif;
+    background-color: rgb(63, 135, 138);
+    padding-top: 3rem;
+}*/
+
+img{
+    width: 250px;
+    display:block;
+    margin:auto;
+    padding: 2rem;
+}
+.productos h2,.carrito h2{
+    font-family: 'Arvo', serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(47, 65, 30);
+}
+
+.contenedor{
+    /*posicionamiento*/
+    display: grid;
+    /*proporcion de columnas*/
+    grid-template-columns: 1fr ;
+    /*proporcion filas*/
+    grid-template-rows:0.2fr 1fr 0.1fr;
+    /*la grilla*/
+    grid-template-areas:
+        "header"
+        "contenido"
+        "footer";
+/*    height: 100vh;
+    width: 100vw;*/
+    position: relative;
+}
+
+.contenido{
+    grid-area:contenido ;
+    /*posicionamiento*/
+    display: grid;
+    /*proporcion de columnas*/
+    grid-template-columns: 1.3fr 0.1fr 1fr ;
+    /*proporcion filas*/
+    grid-template-rows:1.2fr 0.1fr ;
+    /*la grilla*/
+    grid-template-areas:
+        "productos vacio carrito"
+        "vacio1 vacio1 totalcompra";
+    width: 90%;
+    margin: auto;
+}
+
+.productos, .carrito{
+    grid-area: productos;
+    background-color: rgba(128, 255, 0, 0.295);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 0.5rem;
+    box-shadow:1px 1px 10px #55793d ;
+}
+.carrito{
+grid-area: carrito;
+}
+
+.totalCompra{
+    grid-area: totalcompra;
+     /*posicionamiento*/
+     display: grid;
+     /*proporcion de columnas*/
+     grid-template-columns: 0.6fr 1.3fr ;
+     /*la grilla*/
+     grid-template-areas:
+         "boton importe";
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+}
+
+.totalCompra button{
+    grid-area: boton;
+    border-radius: 0.3rem;
+    font-family: 'Arvo', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.totalCompra button:hover{
+    text-shadow:1px 2px 3px rgb(11, 99, 16)
+}
+
+.totalCompra h3{
+    grid-area: importe;
+    font-family: 'Arvo', serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    align-content: space-between;
+    justify-content: center;
+    text-shadow:1px 2px 3px rgb(11, 99, 16)
+}
+
+.header{
+    grid-area: header;
+}
+
+.pieDePagina{
+    grid-area: footer;
+    width: 100vw;
+    color:white;
+    background-image: url(../images/piedepagina-01.jpg);
+    height: 5rem;
+    background-size: 100vw;
+    opacity: 0.8;
+   
+}
+.pieDePagina p{
+    font-family: 'Arvo', serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    display:block;
+    margin-top:20px;
+    letter-spacing: 2px;
+    text-shadow:4px 4px 4px rgb(10, 10, 10)
+}
+
+table td.nombre{
+    color: rgb(46, 75, 18);
+    font-weight: bold;
+    font-family: 'Handlee', cursive;
+}
+
+#tabla1 td, #tabla2 td{
+    vertical-align: middle;
+    margin: auto;
+}
+table tr{
+    vertical-align: auto;
+    line-height: 15px;
+    text-align: center;
+    justify-items: center;
+}
+
+.productos button, .carrito button{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+.productos button:hover, .carrito button:hover{
+    text-shadow:1px 1px 1px rgb(10, 10, 10)
+}
+.subtotal{
+    font-weight: bold;
+    color: rgb(131, 15, 15);
+}
